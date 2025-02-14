@@ -1,0 +1,65 @@
+:root {
+    --strong-cyan: #26c2ae;
+    --very-dark-cyan: #00474b;
+    --dark-grayish-cyan: #5e7a7d;
+    --grayish-cyan: #7f9c9f;
+    --light-grayish-cyan: #c5e4e7;
+    --very-light-grayish-cyan: #f3f9fa;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", serif;
+}
+
+body {
+    font-weight: 700;
+    background-color: var(--light-grayish-cyan);
+    min-block-size: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.calculator-container {
+    background-color: var(--white);
+    padding: 32px;
+    border-start-start-radius: 25px;
+    border-start-end-radius: 25px;
+}
+
+
+.calculator-container__bill label {
+    display: block;
+    margin-block-end: 6px;
+}
+
+input {
+    width: 100%;
+    block-size: 48px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--very-light-grayish-cyan);
+    text-align: end;
+    font-size: 24px;
+    color: var(--very-dark-cyan);
+}
+
+input::placeholder {
+    opacity: 0.35;
+}
+
+input:focus-visible {
+    outline: 2px solid var(--strong-cyan);
+}
+
+.calculator-container__bill input {
+    background-image: url(/images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+}
