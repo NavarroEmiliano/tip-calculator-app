@@ -4,55 +4,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-
-
-  <title>Tip calculator app</title>
+  <title>Tip Calculator App</title>
 </head>
 
 <body>
-
-  <div class="logo-container">
-    <img src="/images/logo.svg" alt="app calculator logo">
+  <div class="app__logo">
+    <img src="/images/logo.svg" alt="App Calculator Logo">
   </div>
 
-  <main class="calc-container">
+  <main class="calculator">
+    <div class="calculator__form">
+      <div class="calculator__input-group calculator__input-group--bill">
+        <label for="bill">Bill</label>
+        <input id="bill" type="number" name="bill" placeholder="0" min="0">
+      </div>
 
-    <div class="calc-container__bill">
-      <label for="bill">Bill</label>
-      <input id="bill" type="number" name="bill" placeholder="0" min="0">
-    </div>
+      <div class="calculator__input-group calculator__input-group--tip">
+        <label>Select Tip %</label>
+        <div class="tip-options">
+          <button class="tip-options__button">5</button>
+          <button class="tip-options__button">10</button>
+          <button class="tip-options__button">15</button>
+          <button class="tip-options__button">25</button>
+          <button class="tip-options__button">50</button>
+          <input class="tip-options__custom" type="number" placeholder="Custom" min="0" max="100">
+        </div>
+      </div>
 
-    <div class="calc-container__percentages">
-      <label>Select Tip %</label>
-      <div class="percentajes__buttons">
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <input type="number" placeholder="Custom" min="0" max="100">
+      <div class="calculator__input-group calculator__input-group--people">
+        <label for="people-input">Number of People</label>
+        <input id="people-input" type="number" placeholder="0" min="0" max="100">
       </div>
     </div>
-    
-    Number of People
 
-    Tip Amount
-    / person
-
-    Total
-    / person
-
-    Reset
-
+    <div class="calculator__summary">
+      <div class="summary__values">
+        <div class="summary__item">
+          <div class="summary__text">
+            <p class="summary__title">Tip Amount</p>
+            <p class="summary__subtitle">/ person</p>
+          </div>
+          <p class="summary__amount">4.27</p>
+        </div>
+        <div class="summary__item">
+          <div class="summary__text">
+            <p class="summary__title">Total</p>
+            <p class="summary__subtitle">/ person</p>
+          </div>
+          <p class="summary__amount">4.27</p>
+        </div>
+      </div>
+      <button class="summary__reset-button">Reset</button>
+    </div>
   </main>
-
 </body>
 
 </html>

@@ -18,32 +18,31 @@
 body {
     font-weight: 700;
     background-color: var(--light-grayish-cyan);
-    min-block-size: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     gap: 40px;
+    padding-top: 50px;
 }
 
 label {
     display: block;
+    color: var(--dark-grayish-cyan);
 }
-
 
 input {
     width: 100%;
-    block-size: 48px;
+    height: 48px;
     border-radius: 5px;
     border: none;
     background-color: var(--very-light-grayish-cyan);
-    text-align: end;
+    text-align: right;
     font-size: 24px;
     color: var(--very-dark-cyan);
-    border-radius: 5px;
     cursor: pointer;
-    padding-inline: 17px;
-    padding-block: 6px;
+    padding: 6px 17px;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -52,14 +51,13 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-/* Para Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
     appearance: textfield;
 }
 
 input:hover,
-input:focus-visible{
+input:focus-visible {
     outline: 2px solid var(--strong-cyan);
     outline-offset: -2px;
 }
@@ -68,51 +66,139 @@ input::placeholder {
     opacity: 0.35;
 }
 
-.calc-container {
+button {
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.calculator {
     background-color: var(--white);
     padding: 32px;
-    border-start-start-radius: 25px;
-    border-start-end-radius: 25px;
+    border-radius: 25px 25px 0 0;
 }
 
-.calc-container__bill {
-    margin-block-end: 32px;
+.calculator__input-group {
+    margin-bottom: 32px;
 }
 
-.calc-container__bill label {
-    margin-block-end: 6px;
+.calculator__input-group label {
+    margin-bottom: 6px;
 }
 
-
-
-.calc-container__bill input {
+.calculator__input-group--bill input {
     background-image: url(/images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: 20px center;
 }
 
-.calc-container__percentages label {
-    margin-block-end: 16px;
+.calculator__input-group--tip label {
+    margin-bottom: 16px;
 }
 
-.percentajes__buttons {
+.tip-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px 17px;
-    margin-block-end: 32px;
 }
 
-.percentajes__buttons button {
-    block-size: 48px;
-    border-radius: 5px;
+.tip-options__button {
     background-color: var(--very-dark-cyan);
-    border: none;
-    font-size: 24px;
     color: var(--white);
-    cursor: pointer;
 }
 
-.percentajes__buttons button:hover {
+.tip-options__button::after {
+    content: "%";
+}
+
+.tip-options__button:hover {
     background-color: var(--grayish-cyan);
     color: var(--very-dark-cyan);
+}
+
+.calculator__input-group--people input {
+    background-image: url(/images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+}
+
+.calculator__summary {
+    background-color: var(--very-dark-cyan);
+    border-radius: 15px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.summary__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.summary__title {
+    color: var(--white);
+}
+
+.summary__subtitle {
+    color: var(--grayish-cyan);
+    font-size: 13px;
+}
+
+.summary__amount {
+    font-size: 32px;
+    color: var(--strong-cyan);
+}
+
+.summary__amount::before {
+    content: "$";
+}
+
+.summary__reset-button {
+    width: 100%;
+    text-transform: uppercase;
+    background-color: var(--grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.summary__reset-button:hover {
+    background-color: var(--very-light-grayish-cyan);
+}
+
+@media (width > 57.5rem) {
+    body {
+        justify-content: center;
+        gap: 88px;
+        padding-top: 0px;
+    }
+
+    .calculator {
+        width: 920px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px;
+        border-radius: 25px;
+    }
+
+    .calculator__input-group--bill {
+        margin-bottom: 40px;
+    }
+
+    .tip-options {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px 14px;
+    }
+
+    .calculator__summary {
+        padding: 40px;
+    }
+
+    .summary__amount {
+        font-size: 48px;
+        letter-spacing: -1px;
+    }
 }
