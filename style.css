@@ -26,18 +26,10 @@ body {
     gap: 40px;
 }
 
-.calculator-container {
-    background-color: var(--white);
-    padding: 32px;
-    border-start-start-radius: 25px;
-    border-start-end-radius: 25px;
-}
-
-
-.calculator-container__bill label {
+label {
     display: block;
-    margin-block-end: 6px;
 }
+
 
 input {
     width: 100%;
@@ -48,18 +40,65 @@ input {
     text-align: end;
     font-size: 24px;
     color: var(--very-dark-cyan);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input:hover,
+input:focus-visible{
+    outline: 2px solid var(--strong-cyan);
+    outline-offset: -2px;
 }
 
 input::placeholder {
     opacity: 0.35;
 }
 
-input:focus-visible {
-    outline: 2px solid var(--strong-cyan);
+.calc-container {
+    background-color: var(--white);
+    padding: 32px;
+    border-start-start-radius: 25px;
+    border-start-end-radius: 25px;
 }
 
-.calculator-container__bill input {
+.calc-container__bill {
+    margin-block-end: 32px;
+}
+
+.calc-container__bill label {
+    margin-block-end: 6px;
+}
+
+
+
+.calc-container__bill input {
     background-image: url(/images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: 20px center;
+}
+
+.calc-container__percentages label {
+    margin-block-end: 16px;
+}
+
+.percentajes__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 17px;
+    margin-block-end: 32px;
+}
+
+.percentajes__buttons button {
+    block-size: 48px;
+    border-radius: 5px;
+    background-color: var(--very-dark-cyan);
+    border: none;
+    font-size: 24px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.percentajes__buttons button:hover {
+    background-color: var(--grayish-cyan);
+    color: var(--very-dark-cyan);
 }

@@ -22,22 +22,25 @@
     <img src="/images/logo.svg" alt="app calculator logo">
   </div>
 
-  <main class="calculator-container">
+  <main class="calc-container">
 
-    <div class="calculator-container__bill">
+    <div class="calc-container__bill">
       <label for="bill">Bill</label>
       <input id="bill" type="number" name="bill" placeholder="0" min="0">
     </div>
+
+    <div class="calc-container__percentages">
+      <label>Select Tip %</label>
+      <div class="percentajes__buttons">
+        <button>5%</button>
+        <button>10%</button>
+        <button>15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <input type="number" placeholder="Custom" min="0" max="100">
+      </div>
+    </div>
     
-
-    Select Tip %
-    5%
-    10%
-    15%
-    25%
-    50%
-    Custom
-
     Number of People
 
     Tip Amount
