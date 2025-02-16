@@ -64,7 +64,7 @@ input:focus-visible {
 }
 
 input::placeholder {
-    opacity: 0.35;
+    opacity: 0.6;
 }
 
 button {
@@ -79,6 +79,7 @@ button {
     background-color: var(--white);
     padding: 32px;
     border-radius: 25px 25px 0 0;
+    box-shadow: 0 20px 50px 5px rgba(0, 0, 0, 0.1);
 }
 
 .calculator__input-group {
