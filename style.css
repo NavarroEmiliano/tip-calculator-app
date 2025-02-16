@@ -3,7 +3,7 @@
     --very-dark-cyan: #00474b;
     --dark-grayish-cyan: #5e7a7d;
     --grayish-cyan: #7f9c9f;
-    --light-grayish-cyan: #9fe8df;
+    --light-grayish-cyan: #c5e4e7;
     --very-light-grayish-cyan: #f3f9fa;
     --cyan-disabled: #0d686d;
     --white: #ffffff;
@@ -210,6 +210,10 @@ button {
         grid-template-columns: repeat(2, 1fr);
         gap: 48px;
         border-radius: 25px;
+    }
+
+    .calculator__form {
+        padding: 16px;
     }
 
     .calculator__input-group--bill {
