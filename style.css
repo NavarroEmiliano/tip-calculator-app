@@ -215,7 +215,8 @@ button {
     }
 
     .calculator__form {
-        padding: 16px;
+        padding-inline-start: 16px;
+        padding-block-start: 16px;
     }
 
     .calculator__input-group--bill {
