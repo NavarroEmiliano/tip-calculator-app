@@ -16,8 +16,8 @@ let bill = 0,
 
 const validations = {
   billIsValid: () => {
-    if (billInput.value.length > 7) {
-      billErrorElement.innerText = "Max 7 digits";
+    if (billInput.value.length > 9) {
+      billErrorElement.innerText = "Max 9 digits";
       return false;
     }
     billErrorElement.innerText = "";
@@ -63,10 +63,8 @@ function calcTip() {
   if (resetBtn.classList.contains("btn-disabled")) {
     resetBtn.classList.remove("btn-disabled");
   }
-  
+
   if (!validations.billIsValid() || !validations.peopleIsValid()) return;
-  
-  
 
   if (bill > 0 && percentageOption > 0 && people > 0) {
     const personTip = Number(((bill * percentageOption) / people).toFixed(2));
@@ -81,7 +79,7 @@ function calcTip() {
 }
 
 function resetValues() {
-  resetBtn.classList.add("btn-disabled")
+  resetBtn.classList.add("btn-disabled");
   resetVariables();
   removeActiveClassBtn();
 
