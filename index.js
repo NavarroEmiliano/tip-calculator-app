@@ -35,7 +35,7 @@ const validations = {
 
 billInput.addEventListener("input", function () {
   bill = Number(billInput.value) || 0;
-  if (validations.billIsValid()) calcTip();
+  calcTip();
 });
 
 tipOptionsContainer.addEventListener("click", function (e) {
@@ -56,11 +56,17 @@ customOptionsInput.addEventListener("input", function () {
 
 peopleInput.addEventListener("input", function () {
   people = Number(peopleInput.value) || 0;
-  if (validations.peopleIsValid()) calcTip();
+  calcTip();
 });
 
 function calcTip() {
+  if (resetBtn.classList.contains("btn-disabled")) {
+    resetBtn.classList.remove("btn-disabled");
+  }
+  
   if (!validations.billIsValid() || !validations.peopleIsValid()) return;
+  
+  
 
   if (bill > 0 && percentageOption > 0 && people > 0) {
     const personTip = Number(((bill * percentageOption) / people).toFixed(2));
@@ -75,6 +81,7 @@ function calcTip() {
 }
 
 function resetValues() {
+  resetBtn.classList.add("btn-disabled")
   resetVariables();
   removeActiveClassBtn();
 
