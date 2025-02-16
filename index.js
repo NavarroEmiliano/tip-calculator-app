@@ -87,6 +87,10 @@ function resetValues() {
   customOptionsInput.value = "";
   peopleInput.value = "";
 
+  billErrorElement.innerText = "";
+  peopleErrorElement.innerText = "";
+
+
   personTipElement.innerText = "0.00";
   personTotalElement.innerText = "0.00";
 }
