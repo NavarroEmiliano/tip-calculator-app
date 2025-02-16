@@ -55,7 +55,8 @@ customOptionsInput.addEventListener("input", function () {
 });
 
 peopleInput.addEventListener("input", function () {
-  people = Number(peopleInput.value) || 0;
+  peopleInput.value = Math.floor(peopleInput.value) || 0;
+  people = Number(peopleInput.value)
   calcTip();
 });
 
