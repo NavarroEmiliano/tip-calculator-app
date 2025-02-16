@@ -5,6 +5,7 @@
     --grayish-cyan: #7f9c9f;
     --light-grayish-cyan: #9fe8df;
     --very-light-grayish-cyan: #f3f9fa;
+    --cyan-disabled: #0d686d;
     --white: #ffffff;
 }
 
@@ -174,7 +175,16 @@ button {
     background-color: var(--light-grayish-cyan);
 }
 
-@media (width > 57.5rem) {
+.btn-disabled { 
+    background-color: var(--cyan-disabled);
+    cursor: default;
+}
+
+.btn-disabled:hover { 
+    background-color: var(--cyan-disabled);
+}
+
+@media (width > 47rem) {
     body {
         justify-content: center;
         gap: 88px;
@@ -182,7 +192,8 @@ button {
     }
 
     .calculator {
-        width: 920px;
+        max-inline-size: 920px;
+        inline-size: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 48px;

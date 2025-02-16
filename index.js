@@ -46,6 +46,9 @@ function calcTip() {
 
     personTipElement.innerText = personTip;
     personTotalElement.innerText = personTotal;
+  } else {
+    personTipElement.innerText = 0;
+    personTotalElement.innerText = 0;
   }
 }
 
@@ -61,8 +64,8 @@ function resetValues() {
   customOptionsInput.value = "";
   peopleInput.value = "";
 
-  personTipElement.innerText = 0
-  personTotalElement.innerText = 0
+  personTipElement.innerText = 0;
+  personTotalElement.innerText = 0;
 }
 
 resetBtn.addEventListener("click", resetValues);
