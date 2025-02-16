@@ -130,6 +130,16 @@ button {
     background-position: 20px center;
 }
 
+.label-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-message {
+    color: rgb(253, 44, 44);
+    text-align: end;
+}
+
 .calculator__summary {
     background-color: var(--very-dark-cyan);
     border-radius: 15px;
@@ -144,6 +154,7 @@ button {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .summary__title {
@@ -158,6 +169,7 @@ button {
 .summary__amount {
     font-size: 32px;
     color: var(--strong-cyan);
+    margin-inline-start: auto;
 }
 
 .summary__amount::before {
@@ -175,12 +187,12 @@ button {
     background-color: var(--light-grayish-cyan);
 }
 
-.btn-disabled { 
+.btn-disabled {
     background-color: var(--cyan-disabled);
     cursor: default;
 }
 
-.btn-disabled:hover { 
+.btn-disabled:hover {
     background-color: var(--cyan-disabled);
 }
 

@@ -21,7 +21,10 @@
   <main class="calculator">
     <div class="calculator__form">
       <div class="calculator__input-group calculator__input-group--bill">
-        <label for="bill">Bill</label>
+        <div class="label-box">
+          <label for="bill">Bill</label>
+          <p class="error-message error-message__bill"></p>
+        </div>
         <input id="bill" type="number" name="bill" placeholder="0" min="0">
       </div>
 
@@ -38,7 +41,10 @@
       </div>
 
       <div class="calculator__input-group calculator__input-group--people">
-        <label for="people-input">Number of People</label>
+        <div class="label-box">
+          <label for="people-input">Number of People</label>
+          <p class="error-message error-message__people"></p>
+        </div>
         <input id="people-input" type="number" placeholder="0" min="0" max="100">
       </div>
     </div>
