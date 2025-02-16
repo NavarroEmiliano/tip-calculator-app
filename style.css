@@ -80,7 +80,6 @@ button {
     padding: 32px;
     border-radius: 25px 25px 0 0;
     box-shadow: 0 20px 50px 5px rgba(0, 0, 0, 0.1);
-    margin-block-end: 40px;
 }
 
 .calculator__input-group {
@@ -212,6 +211,8 @@ button {
         grid-template-columns: repeat(2, 1fr);
         gap: 48px;
         border-radius: 25px;
+        margin-block-end: 70px;
+
     }
 
     .calculator__form {
