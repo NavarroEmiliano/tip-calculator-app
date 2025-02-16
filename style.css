@@ -3,7 +3,7 @@
     --very-dark-cyan: #00474b;
     --dark-grayish-cyan: #5e7a7d;
     --grayish-cyan: #7f9c9f;
-    --light-grayish-cyan: #c5e4e7;
+    --light-grayish-cyan: #9fe8df;
     --very-light-grayish-cyan: #f3f9fa;
     --white: #ffffff;
 }
@@ -109,12 +109,17 @@ button {
     color: var(--white);
 }
 
+.btn-active {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
 .tip-options__button::after {
     content: "%";
 }
 
 .tip-options__button:hover {
-    background-color: var(--grayish-cyan);
+    background-color: var(--light-grayish-cyan);
     color: var(--very-dark-cyan);
 }
 
@@ -166,7 +171,7 @@ button {
 }
 
 .summary__reset-button:hover {
-    background-color: var(--very-light-grayish-cyan);
+    background-color: var(--light-grayish-cyan);
 }
 
 @media (width > 57.5rem) {
